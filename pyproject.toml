@@ -1,0 +1,50 @@
+[project]
+name = "ml-engineering-portfolio"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ilgiz Magadeiv",email = "swanger789@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+
+# Указываем совместимость с Python здесь, а не в [project]
+[tool.poetry.dependencies]
+python = "^3.12.8"  # <- Важно! Указываем здесь
+pandas = "^2.3.2"
+scikit-learn = "^1.7.2"
+matplotlib = "^3.10.6"
+seaborn = "^0.13.2"
+
+
+package-mode = false
+
+# torch и другие зависимости тоже будут здесь
+torch = { version = "2.7.0", source = "pytorch-cu126" }
+torchvision = { version = "0.22.0", source = "pytorch-cu126" }
+torchaudio = { version = "2.7.0", source = "pytorch-cu126" }
+pillow = "^11.3.0"
+pyprind = "^2.11.3"
+nltk = "^3.9.1"
+mlxtend = "^0.23.4"
+pytorch-lightning = "^2.5.5"
+gdown = "^5.2.0"
+beautifulsoup4 = "^4.14.2"
+transformers = "^4.57.1"
+datasets = "^4.4.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.30.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.source]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+priority = "explicit"
+
