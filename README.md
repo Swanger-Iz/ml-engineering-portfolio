@@ -1,32 +1,44 @@
-# Vision Transformer for CIFAR-10
+# ML Engineering Portfolio
 
-Implementation of a Vision Transformer (ViT) from scratch in PyTorch for image classification on the CIFAR-10 dataset.
+Репозиторий с production-ориентированными проектами в области машинного обучения:  
+от классификации изображений до NLP и MLOps.  
+Все проекты реализованы на **PyTorch**, имеют модульную структуру, CLI-интерфейс и документацию.
 
-## 📊 Results
-- **Test Accuracy**: 63.4%
-- **Model**: Custom ViT (patch size=4, embed_dim=64, depth=6, num_heads=4)
-- **Training**: 10 epochs, AdamW, lr=3e-4
-- **Hardware**: Trained on GPU
+Цель: демонстрация навыков **ML-инженера**, а не только исследователя:
+- воспроизводимость через Poetry,
+- инференс как сервис (`predict.py`),
+- чистая архитектура кода,
+- готовность к интеграции в продукт.
 
-> Note: This is a minimal implementation to demonstrate understanding of ViT architecture. Performance can be improved with data augmentation, longer training, and hyperparameter tuning.
+---
 
-## ▶️ How to Use
+## 📂 Проекты
 
-### Install dependencies
+### 1. [Vision Transformer for CIFAR-10](ViT_cifar10/)
+- Реализация ViT **с нуля** (без `timm`)
+- Обучение и инференс на CPU/GPU
+- CLI: `python predict.py --image ...`
+- Accuracy: **63.4%** (10 эпох)
+- Технологии: PyTorch, argparse, Poetry
+
+> Подходит как основа для fine-tuning под другие датасеты.
+
+---
+
+## 🛠️ Общие практики
+- Каждый проект — самодостаточная папка с `requirements.txt` / `pyproject.toml`
+- Все гиперпараметры вынесены в `config.py`
+- Модель, данные и инференс разделены по модулям
+- Поддержка воспроизводимости через фиксированные seed'ы
+- Английская документация и понятные сообщения коммитов
+
+---
+
+## 🚀 Как использовать
+Перейдите в папку проекта и следуйте инструкциям в его `README.md`.
+
+Пример:
 ```bash
+cd ViT_cifar10
 poetry install
-```
-
-## Run Inference
-```
-poetry run python predict.py --image cat_test.jpg --model vit_model2.pth
-cat
-```
-
-
-## 📁 Project Structure
-* `model.py` — ViT implementation
-* `train.py` — training loop
-* `predict.py` — CLI inference
-* `config.py` — hyperparameters
-* `utils.py` — helper functions (seed, device)
+poetry run python predict.py --image cat_test.jpg
