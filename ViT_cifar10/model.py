@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import torch.functional as F
+import torch.nn.functional as F
 
 
 class PatchEmbedding(nn.Module):
@@ -141,4 +141,6 @@ class VisionTransformer(nn.Module):
         # 5. Классификация
         #    (B, 768) → (B, num_classes)
         return self.head(cls_token)
+    
+
     

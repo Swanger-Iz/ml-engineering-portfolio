@@ -1,2 +1,4 @@
 .python-version
 ViT_cifar10/data
+ViT_cifar10/__pycache__
+wget-log

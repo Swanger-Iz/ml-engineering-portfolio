@@ -1,7 +1,8 @@
 
 import torch.nn as nn
-import torch.optim as optim
 
+
+cifar10_classes = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
 # hyperparams
 batch_size = 128
@@ -19,4 +20,3 @@ drop_rate = .1
 
 
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(params=model.parameters(), lr=learning_rate) 

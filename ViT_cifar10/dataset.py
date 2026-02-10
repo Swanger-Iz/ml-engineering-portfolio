@@ -1,10 +1,9 @@
 import torch
 from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
+from torchvision import datasets
 import config
 
 from torchvision.transforms import v2
-
 
 ## Transform version 2
 transform_v2 = v2.Compose([
@@ -21,4 +20,6 @@ test_dataset = datasets.CIFAR10('data', train=False, download=True, transform=tr
 
 train_dl = DataLoader(train_dataset, batch_size=config.batch_size, shuffle=True)
 test_dl = DataLoader(test_dataset, batch_size=config.batch_size, shuffle=False)
+
+train_dataset.classes
 
