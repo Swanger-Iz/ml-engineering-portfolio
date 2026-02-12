@@ -1,6 +1,0 @@
---2026-02-09 21:15:59--  https://media.istockphoto.com/id/1385217969/photo/ginger-cat-walks.jpg?s=612x612
-Resolving media.istockphoto.com (media.istockphoto.com)... 18.245.218.5, 18.245.218.119, 18.245.218.88, ...
-Connecting to media.istockphoto.com (media.istockphoto.com)|18.245.218.5|:443... connected.
-HTTP request sent, awaiting response... 400 Bad Request
-2026-02-09 21:16:00 ERROR 400: Bad Request.
-
