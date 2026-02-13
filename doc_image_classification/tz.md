@@ -7,8 +7,8 @@
 
 ## Что сделать:
 
-    Загрузить предобученную CNN (EfficientNet-B0 из timm).
-    Fine-tune под 4 ключевых класса (например: invoice, contract, passport, waybill).
+    ✓ Загрузить предобученную CNN (EfficientNet-B0 из timm).
+    ✓ Fine-tune под 4 ключевых класса (например: invoice, contract, passport, waybill).
     Написать predict(image_path) → class + confidence.
     Обернуть в FastAPI с endpoint /predict.
     Добавить валидацию входа (размер, формат), обработку ошибок.
