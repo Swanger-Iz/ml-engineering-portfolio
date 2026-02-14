@@ -50,7 +50,8 @@ def upload_dataset() -> pd.DataFrame:
         class_rpath = os.path.relpath(os.path.join(config.train_path, c))
         
         temp_df = pd.DataFrame(columns=['path', 'labels'])
-        temp_df['path'] = os.path.join(class_rpath, pd.Series(os.listdir(os.path.join(config.train_path, c))))
+        # temp_df['path'] = os.path.join(class_rpath, pd.Series(os.listdir(os.path.join(config.train_path, c))))    # class_rpath + '/' + pd.Series(os.listdir(os.path.join(train_path, c)))
+        temp_df['path'] = [os.path.join(class_rpath, file) for file in pd.Series(os.listdir(os.path.join(config.train_path, c)))]
         temp_df['labels'] = c
         
         tvt_files_df = pd.concat((tvt_files_df, temp_df), axis=0, ignore_index=True)

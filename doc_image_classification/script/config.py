@@ -9,5 +9,5 @@ criterion = nn.CrossEntropyLoss()
 classes = ['invoice', 'letter', 'email', 'news_article']
 number_of_files = 2000
 
-train_path = os.path.join('data', 'train')
-test_path = os.path.join('data', 'test')
+train_path = os.path.join('..', 'data', 'train')
+test_path = os.path.join('..', 'data', 'test')
